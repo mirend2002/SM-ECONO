@@ -1,0 +1,6 @@
+161215
+
+UPDATE `sm_db`.`printer_type` SET `type`='POS Printer' WHERE `type`='Alacarte';
+UPDATE `sm_db`.`printer_type` SET `type`='Label Printer' WHERE `type`='Banquet';
+DELETE FROM `sm_db`.`printer_type` WHERE `type`='Room';
+DELETE FROM `sm_db`.`printer_type` WHERE `type`='Stock';
