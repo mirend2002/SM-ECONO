@@ -133,21 +133,21 @@
                                  </font></Label>
                            </children>
                         </AnchorPane>
-                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="40.0" layoutY="228.0" spacing="5.0" GridPane.columnIndex="4" GridPane.columnSpan="5" GridPane.rowIndex="1">
+                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="40.0" layoutY="228.0" spacing="5.0" GridPane.columnSpan="5" GridPane.rowIndex="3">
                            <children>
-                              <Label prefWidth="115.0" text="Description">
+                              <Label prefWidth="170.0" text="Description">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtDescription" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#txtDescriptionOnKeyReleased" prefWidth="450.0" promptText="Description">
+                              <TextField fx:id="txtDescription" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#txtDescriptionOnKeyReleased" prefWidth="295.0" promptText="Description">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
                               </TextField>
                            </children>
                            <GridPane.margin>
-                              <Insets />
+                              <Insets left="20.0" />
                            </GridPane.margin>
                         </HBox>
                         <HBox id="HBox" alignment="CENTER_LEFT" layoutX="40.0" layoutY="284.0" spacing="5.0" GridPane.columnSpan="4" GridPane.rowIndex="2">
@@ -170,7 +170,7 @@
                               <Insets left="20.0" right="10.0" />
                            </GridPane.margin>
                         </HBox>
-                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="40.0" layoutY="164.0" spacing="5.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="40.0" layoutY="164.0" spacing="5.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2">
                            <children>
                               <Label prefWidth="115.0" text="GSM">
                                  <font>
@@ -187,7 +187,7 @@
                               <Insets />
                            </GridPane.margin>
                         </HBox>
-                        <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="471.0" spacing="5.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                        <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="471.0" spacing="5.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1">
                            <children>
                               <Label prefWidth="115.0" text="Log Date">
                                  <font>
@@ -207,7 +207,7 @@
                               <Insets />
                            </GridPane.margin>
                         </HBox>
-                        <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="471.0" spacing="5.0" GridPane.columnSpan="4" GridPane.rowIndex="3">
+                        <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="471.0" spacing="5.0" GridPane.columnSpan="4" GridPane.rowIndex="4">
                            <children>
                               <Label prefWidth="170.0" text="Issued Weight">
                                  <font>
@@ -227,7 +227,7 @@
                               <Insets left="20.0" />
                            </GridPane.margin>
                         </HBox>
-                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="570.0" layoutY="106.0" spacing="5.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="570.0" layoutY="106.0" spacing="5.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2">
                            <children>
                               <Label prefWidth="120.0" text="Size">
                                  <font>
@@ -244,7 +244,7 @@
                               <Insets left="20.0" />
                            </GridPane.margin>
                         </HBox>
-                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="570.0" layoutY="106.0" spacing="5.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="570.0" layoutY="106.0" spacing="5.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3">
                            <children>
                               <Label prefWidth="115.0" text="Reel F/B">
                                  <font>
@@ -258,7 +258,7 @@
                               </TextField>
                            </children>
                         </HBox>
-                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="870.0" layoutY="106.0" spacing="5.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="870.0" layoutY="106.0" spacing="5.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="3">
                            <children>
                               <Label prefWidth="120.0" text="Reel No">
                                  <font>
@@ -275,14 +275,14 @@
                               <Insets left="20.0" />
                            </GridPane.margin>
                         </HBox>
-                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="510.0" layoutY="46.0" spacing="5.0" GridPane.columnSpan="4" GridPane.rowIndex="4">
+                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="510.0" layoutY="46.0" spacing="5.0" GridPane.columnIndex="4" GridPane.columnSpan="4" GridPane.rowIndex="4">
                            <children>
                               <Label prefWidth="200.0" text="Returned Weight">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtReturnedWeight" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#txtReturnedWeightOnReleased" prefWidth="240.0" promptText="Returned Weight">
+                              <TextField fx:id="txtReturnedWeight" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#txtReturnedWeightOnReleased" prefWidth="320.0" promptText="Returned Weight">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
@@ -298,10 +298,10 @@
                               </Button>
                            </children>
                            <GridPane.margin>
-                              <Insets left="20.0" right="10.0" />
+                              <Insets />
                            </GridPane.margin>
                         </HBox>
-                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="510.0" layoutY="106.0" prefHeight="60.0" prefWidth="471.0" spacing="5.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                        <HBox id="HBox" alignment="CENTER_LEFT" layoutX="510.0" layoutY="106.0" prefHeight="60.0" prefWidth="471.0" spacing="5.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="1">
                            <children>
                               <Label prefWidth="115.0" text="Reel Liner">
                                  <font>
