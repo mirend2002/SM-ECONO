@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SM-FX.jar" size="1054192" download="eager" />
+    <jar href="SM-FX.jar" size="1057953" download="eager" />
     <jar href="lib/GrFingerJava.jar" size="13041" download="eager" />
     <jar href="lib/RXTXcomm.jar" size="60984" download="eager" />
     <jar href="lib/Undecorator.jar" size="99012" download="eager" />
