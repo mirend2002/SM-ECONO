@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.19, for macos10.15 (x86_64)
 --
--- Host: 127.0.0.1    Database: sm_db
+-- Host: localhost    Database: sm_db
 -- ------------------------------------------------------
--- Server version	8.0.16
+-- Server version	5.6.21
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- SET NAMES utf8 ;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `customer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_code` varchar(45) NOT NULL,
@@ -47,7 +47,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `general_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `general_log` (
   `event_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_host` mediumtext NOT NULL,
@@ -73,7 +73,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `machine`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `machine` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `machine_name` varchar(100) DEFAULT NULL,
@@ -98,7 +98,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notifications` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nid` varchar(45) NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE `notifications` (
   PRIMARY KEY (`nid`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `fk_notify_notify_idx` (`type`),
-  CONSTRAINT `fk_notify_notify` FOREIGN KEY (`type`) REFERENCES `user_notification_type` (`type`)
+  CONSTRAINT `fk_notify_notify` FOREIGN KEY (`type`) REFERENCES `user_notification_type` (`type`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -132,7 +132,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `printer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `printer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` varchar(45) NOT NULL,
@@ -162,7 +162,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `printer_report`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `printer_report` (
   `pid` varchar(45) NOT NULL,
   `rid` varchar(45) NOT NULL,
@@ -189,7 +189,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `printer_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `printer_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(45) NOT NULL,
@@ -214,7 +214,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `reel`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reel` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `reel_code` varchar(45) NOT NULL,
@@ -253,7 +253,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `reel_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reel_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `real_code` varchar(45) NOT NULL,
@@ -281,7 +281,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `report`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `report` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `rid` varchar(45) NOT NULL,
@@ -314,7 +314,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `report_reg`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `report_reg` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `report_id` varchar(45) NOT NULL,
@@ -346,7 +346,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `report_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `report_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(45) NOT NULL,
@@ -371,7 +371,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `scale`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `scale` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `weight_scale_id` varchar(45) NOT NULL,
@@ -399,7 +399,7 @@ CREATE TABLE `scale` (
   KEY `scale_fk1_idx` (`scale_id`),
   KEY `scale_fk2_idx` (`customer_code`),
   CONSTRAINT `scale_fk1` FOREIGN KEY (`scale_id`) REFERENCES `scale_register` (`scale_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `scale_fk2` FOREIGN KEY (`customer_code`) REFERENCES `customer` (`customer_code`) ON UPDATE CASCADE
+  CONSTRAINT `scale_fk2` FOREIGN KEY (`customer_code`) REFERENCES `customer` (`customer_code`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -418,7 +418,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `scale_register`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `scale_register` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `scale_id` varchar(45) NOT NULL,
@@ -445,7 +445,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `server_config`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `server_config` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ip` varchar(20) DEFAULT NULL,
@@ -470,7 +470,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `size`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `size` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `size` varchar(45) DEFAULT NULL,
@@ -495,7 +495,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `slow_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `slow_log` (
   `start_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `user_host` mediumtext NOT NULL,
@@ -527,7 +527,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `EID` varchar(45) NOT NULL,
@@ -567,7 +567,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_notification_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_notification_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(45) NOT NULL,
@@ -592,7 +592,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_notifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_notifications` (
   `EID` varchar(45) NOT NULL,
   `type` varchar(45) NOT NULL,
@@ -620,13 +620,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_permission_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_permission_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(45) NOT NULL,
   PRIMARY KEY (`type`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=137 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -635,7 +635,7 @@ CREATE TABLE `user_permission_type` (
 
 LOCK TABLES `user_permission_type` WRITE;
 /*!40000 ALTER TABLE `user_permission_type` DISABLE KEYS */;
-INSERT INTO `user_permission_type` VALUES (73,'User Registration'),(128,'Weight Scale'),(129,'Report Generator'),(130,'Report Registration'),(131,'Report Settings'),(132,'Printer Registration'),(133,'Scale Registration'),(134,'Search Weight Scale'),(135,'Customer Registration');
+INSERT INTO `user_permission_type` VALUES (73,'User Registration'),(128,'Weight Scale'),(129,'Report Generator'),(130,'Report Registration'),(131,'Report Settings'),(132,'Printer Registration'),(133,'Scale Registration'),(134,'Search Weight Scale'),(135,'Customer Registration'),(136,'Reel Requisition');
 /*!40000 ALTER TABLE `user_permission_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -645,7 +645,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_permissions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_permissions` (
   `EID` varchar(45) NOT NULL,
   `type` varchar(45) NOT NULL,
@@ -667,7 +667,7 @@ CREATE TABLE `user_permissions` (
 
 LOCK TABLES `user_permissions` WRITE;
 /*!40000 ALTER TABLE `user_permissions` DISABLE KEYS */;
-INSERT INTO `user_permissions` VALUES ('EM0004','Customer Registration',1,1,1,1,0),('EM0004','Printer Registration',1,1,1,1,0),('EM0004','Report Generator',1,1,1,1,0),('EM0004','Report Registration',1,1,1,1,0),('EM0004','Report Settings',1,1,1,1,0),('EM0004','Scale Registration',1,1,1,1,0),('EM0004','Search Weight Scale',1,1,1,1,0),('EM0004','User Registration',1,1,1,1,0),('EM0004','Weight Scale',1,1,1,1,0),('EM0005','Customer Registration',1,1,1,1,0),('EM0005','Printer Registration',1,1,1,1,0),('EM0005','Report Generator',1,1,1,1,0),('EM0005','Report Registration',1,1,1,1,0),('EM0005','Report Settings',1,1,1,1,0),('EM0005','Scale Registration',1,1,1,1,0),('EM0005','Search Weight Scale',1,1,1,1,0),('EM0005','User Registration',1,1,1,1,0),('EM0005','Weight Scale',1,1,1,1,0);
+INSERT INTO `user_permissions` VALUES ('EM0004','Customer Registration',1,1,1,1,0),('EM0004','Printer Registration',1,1,1,1,0),('EM0004','Report Generator',1,1,1,1,0),('EM0004','Report Registration',1,1,1,1,0),('EM0004','Report Settings',1,1,1,1,0),('EM0004','Scale Registration',1,1,1,1,0),('EM0004','Search Weight Scale',1,1,1,1,0),('EM0004','User Registration',1,1,1,1,0),('EM0004','Weight Scale',1,1,1,1,0),('EM0005','Customer Registration',1,1,1,1,0),('EM0005','Printer Registration',1,1,1,1,0),('EM0005','Reel Requisition',1,1,1,1,0),('EM0005','Report Generator',1,1,1,1,0),('EM0005','Report Registration',1,1,1,1,0),('EM0005','Report Settings',1,1,1,1,0),('EM0005','Scale Registration',1,1,1,1,0),('EM0005','Search Weight Scale',1,1,1,1,0),('EM0005','User Registration',1,1,1,1,0),('EM0005','Weight Scale',1,1,1,1,0);
 /*!40000 ALTER TABLE `user_permissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -677,7 +677,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_sub_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_sub_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(45) NOT NULL,
@@ -702,7 +702,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(45) NOT NULL,
@@ -730,4 +730,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-26 14:14:55
+-- Dump completed on 2020-01-26 19:10:04
